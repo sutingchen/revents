@@ -7,7 +7,7 @@ export default function EventForm({ setFormOpen }) {
       <Header content="Create new event" />
       <Form>
         <Form.Field>
-          <input type="text" placeholder="Event title" />
+          <input type="text" placeholder="Event Title" />
         </Form.Field>
         <Form.Field>
           <input type="text" placeholder="Category" />
