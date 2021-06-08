@@ -10,14 +10,13 @@ export default function EventDashboard({formOpen, setFormOpen}) {
   // 2. Declare a function that can update the state variable
   const [events, setEvents] = useState(sampleData);
   
-
   return (
     <Grid>
       <Grid.Column width={10}>
         <EventList events={events}/>
       </Grid.Column>
       <Grid.Column width={6}>
-        {formOpen && <EventForm setFormOpen={setFormOpen}/>}
+        {formOpen && <EventForm setFormOpen={setFormOpen} setEvents={setEvents}/>}
       </Grid.Column>
     </Grid>
   );
