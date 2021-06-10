@@ -2,8 +2,8 @@ import cuid from 'cuid';
 import React, { useState } from 'react';
 import { Button, Form, Header, Segment } from 'semantic-ui-react';
 
-export default function EventForm({ setFormOpen, setEvents, createEvent }) {
-  const intialValues = {
+export default function EventForm({ setFormOpen, setEvents, createEvent, selectedEvent, updateEvent}) {
+  const intialValues = selectedEvent ?? {
     title: '',
     category: '',
     description: '',
@@ -15,8 +15,8 @@ export default function EventForm({ setFormOpen, setEvents, createEvent }) {
   const [values, setValues] = useState(intialValues);
 
   function handleFormSubmit() {
-    //console.log(values);
-    createEvent({
+    selectedEvent ? updateEvent({...selectedEvent, ...values}) 
+    : createEvent({
       ...values,
       id: cuid(),
       hostedBy: 'Bob',
@@ -33,7 +33,7 @@ export default function EventForm({ setFormOpen, setEvents, createEvent }) {
 
   return (
     <Segment clearing>
-      <Header content="Create new event" />
+      <Header content={selectedEvent ? 'Edit the event' : 'Create new event'} />
       <Form onSubmit={handleFormSubmit}>
         <Form.Field>
           <input
