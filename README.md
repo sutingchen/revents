@@ -4,7 +4,7 @@ This event management platform allows a registered user to
 - Update event details
 - Join an event
 - Follow/unfollow an event
-- Receive personalised news feed based on other account's activities
+- Receive personalised news feeds about the following users' activities
 - Join an event's chat
 
 ## Tools used
