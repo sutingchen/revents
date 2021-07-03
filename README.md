@@ -2,7 +2,7 @@
 This event management platform allows a registered user to 
 - Create an event
 - Update event details
-- Add/cancel an event
+- Join an event
 - Follow/unfollow an event
 - Receive personalised news feed based on other account's activities
 - Join an event's chat
